@@ -1,0 +1,8 @@
+-- Revert banshee variants
+START TRANSACTION;
+DELETE FROM `creature` WHERE `id1` BETWEEN 958701 AND 958706;
+DELETE FROM `creature_template_model` WHERE `CreatureID` BETWEEN 958701 AND 958706;
+DELETE FROM `creature_template` WHERE `entry` BETWEEN 958701 AND 958706;
+DELETE FROM `creature_model_info` WHERE `DisplayID` BETWEEN 97701 AND 97712;
+DELETE FROM `creaturedisplayinfo_dbc` WHERE `ID` BETWEEN 97701 AND 97712;
+COMMIT;
